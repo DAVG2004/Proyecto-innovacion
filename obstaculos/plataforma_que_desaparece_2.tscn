@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3t867ctpfw0r"]
+
+[ext_resource type="Script" path="res://plataforma_que_desaparece_2.gd" id="1_0om3u"]
+[ext_resource type="Texture2D" uid="uid://vryuqmqeeunu" path="res://obstucalos/Grey Off.png" id="2_exhfl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pipm"]
+size = Vector2(52, 10)
+
+[node name="plataforma que desaparece 2" type="StaticBody2D"]
+script = ExtResource("1_0om3u")
+
+[node name="GreyOff" type="Sprite2D" parent="."]
+scale = Vector2(1.688, 2)
+texture = ExtResource("2_exhfl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_4pipm")
+one_way_collision = true
+
+[node name="Timer" type="Timer" parent="."]

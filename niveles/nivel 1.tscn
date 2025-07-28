@@ -1,0 +1,335 @@
+[gd_scene load_steps=20 format=3 uid="uid://cmjkfg7qc0fp7"]
+
+[ext_resource type="Script" path="res://niveles/nivel_1.gd" id="1_531r1"]
+[ext_resource type="Texture2D" uid="uid://b8qfk2ltbu4bm" path="res://Rocky Roads/Enemies/Backgrounds/desert_a.png" id="1_li8d7"]
+[ext_resource type="Texture2D" uid="uid://b1lg0prjvkw6n" path="res://Rocky Roads/Enemies/Backgrounds/trees.png" id="2_jfqsl"]
+[ext_resource type="Texture2D" uid="uid://b6vamooxjeeu0" path="res://Rocky Roads/Deco/log_wall.png" id="3_1h5i4"]
+[ext_resource type="Texture2D" uid="uid://k2ppbga13ky7" path="res://Rocky Roads/Deco/tree_b.png" id="4_q0bkp"]
+[ext_resource type="Texture2D" uid="uid://bn2w4nbbylyai" path="res://Rocky Roads/Deco/tree.png" id="5_wu5vu"]
+[ext_resource type="Texture2D" uid="uid://cspkrvr1n42xj" path="res://Rocky Roads/Deco/tree_trunk.png" id="6_4afc1"]
+[ext_resource type="Texture2D" uid="uid://ku57qlfccyj1" path="res://Rocky Roads/Deco/rock.png" id="7_717we"]
+[ext_resource type="Texture2D" uid="uid://nx5j1djgqs2k" path="res://Rocky Roads/Objects/sign_arrow.png" id="8_7q7ur"]
+[ext_resource type="PackedScene" uid="uid://dl3csprqrsher" path="res://escenario/islon normal.tscn" id="8_ml14m"]
+[ext_resource type="PackedScene" uid="uid://by2650ky6bmfg" path="res://obstucalos/plataforma_gris.tscn" id="9_uy3mt"]
+[ext_resource type="PackedScene" uid="uid://c5ieb3vtmvmmb" path="res://obstucalos/plataforma_marron.tscn" id="10_7eop7"]
+[ext_resource type="PackedScene" uid="uid://dlnpl036uhnkq" path="res://escenario/static_body_2d.tscn" id="11_jaon7"]
+[ext_resource type="PackedScene" uid="uid://d2bc0cshd5fb0" path="res://elementos/moneda plateada.tscn" id="12_618lh"]
+[ext_resource type="PackedScene" uid="uid://ca2puxkp15qi4" path="res://elementos/bandera.tscn" id="13_870hf"]
+[ext_resource type="PackedScene" uid="uid://c3t867ctpfw0r" path="res://obstucalos/plataforma_que_desaparece_2.tscn" id="16_0vfi2"]
+[ext_resource type="PackedScene" uid="uid://du2knl4xtcxrx" path="res://obstucalos/plataforma_que_desaparece 1.tscn" id="16_u55dj"]
+[ext_resource type="PackedScene" uid="uid://b1mvdjgss8y8a" path="res://characters/personaje.tscn" id="17_ti7v7"]
+[ext_resource type="PackedScene" uid="uid://dl1rrc2breo0" path="res://elementos/zona muerta.tscn" id="18_52m5y"]
+
+[node name="nivel 1" type="Node2D"]
+script = ExtResource("1_531r1")
+
+[node name="DesertA" type="Sprite2D" parent="."]
+position = Vector2(856, -187.5)
+scale = Vector2(31.148, 15)
+texture = ExtResource("1_li8d7")
+
+[node name="Trees2" type="Sprite2D" parent="."]
+position = Vector2(1576, -62)
+scale = Vector2(8, 6.835)
+texture = ExtResource("2_jfqsl")
+
+[node name="LogWall" type="Sprite2D" parent="."]
+position = Vector2(949, -244)
+texture = ExtResource("3_1h5i4")
+
+[node name="TreeB" type="Sprite2D" parent="."]
+position = Vector2(2665, -359)
+scale = Vector2(5, 5)
+texture = ExtResource("4_q0bkp")
+
+[node name="TreeB2" type="Sprite2D" parent="."]
+position = Vector2(2373, -361)
+scale = Vector2(5, 5)
+texture = ExtResource("4_q0bkp")
+
+[node name="LogWall2" type="Sprite2D" parent="."]
+position = Vector2(1074, -244)
+texture = ExtResource("3_1h5i4")
+
+[node name="LogWall4" type="Sprite2D" parent="."]
+position = Vector2(1516, 198)
+texture = ExtResource("3_1h5i4")
+
+[node name="LogWall3" type="Sprite2D" parent="."]
+position = Vector2(1376, 198)
+texture = ExtResource("3_1h5i4")
+
+[node name="Trees" type="Sprite2D" parent="."]
+position = Vector2(-454, -52)
+scale = Vector2(8, 7.005)
+texture = ExtResource("2_jfqsl")
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(-606, -65)
+scale = Vector2(4.401, 5)
+texture = ExtResource("5_wu5vu")
+
+[node name="TreeTrunk" type="Sprite2D" parent="."]
+position = Vector2(-264, 23)
+scale = Vector2(4, 4)
+texture = ExtResource("6_4afc1")
+
+[node name="Rock11" type="Sprite2D" parent="."]
+position = Vector2(994, -243)
+scale = Vector2(2, 2)
+texture = ExtResource("7_717we")
+
+[node name="Rock9" type="Sprite2D" parent="."]
+position = Vector2(981, -234)
+scale = Vector2(2, 2)
+texture = ExtResource("7_717we")
+
+[node name="Rock10" type="Sprite2D" parent="."]
+position = Vector2(1005, -235)
+scale = Vector2(2, 2)
+texture = ExtResource("7_717we")
+
+[node name="SignArrow" type="Sprite2D" parent="."]
+position = Vector2(-200, 13)
+scale = Vector2(5, 2.5)
+texture = ExtResource("8_7q7ur")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("8_ml14m")]
+position = Vector2(-416, 83)
+
+[node name="Trees3" type="Sprite2D" parent="."]
+position = Vector2(3468, -75)
+scale = Vector2(6.835, 6.835)
+texture = ExtResource("2_jfqsl")
+
+[node name="SignArrow4" type="Sprite2D" parent="."]
+position = Vector2(1897, -267)
+scale = Vector2(5, 2.5)
+texture = ExtResource("8_7q7ur")
+
+[node name="SignArrow2" type="Sprite2D" parent="."]
+position = Vector2(248, -61)
+scale = Vector2(5, 2.5)
+texture = ExtResource("8_7q7ur")
+
+[node name="SignArrow3" type="Sprite2D" parent="."]
+position = Vector2(1048, -260)
+scale = Vector2(5, 2.5)
+texture = ExtResource("8_7q7ur")
+
+[node name="plataforma marron2" parent="." instance=ExtResource("9_uy3mt")]
+position = Vector2(107, 6)
+
+[node name="plataforma marron3" parent="." instance=ExtResource("9_uy3mt")]
+position = Vector2(249, -17)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("11_jaon7")]
+position = Vector2(628, 50)
+
+[node name="plataforma marron6" parent="." instance=ExtResource("9_uy3mt")]
+position = Vector2(521, -124)
+
+[node name="plataforma marron8" parent="." instance=ExtResource("9_uy3mt")]
+position = Vector2(808, -208)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("11_jaon7")]
+position = Vector2(1013, -169)
+
+[node name="plataforma marron9" parent="." instance=ExtResource("10_7eop7")]
+position = Vector2(825, 31)
+
+[node name="plataforma marron11" parent="." instance=ExtResource("10_7eop7")]
+position = Vector2(1118, 121)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("11_jaon7")]
+position = Vector2(1448, 272)
+
+[node name="plataforma marron14" parent="." instance=ExtResource("9_uy3mt")]
+position = Vector2(1479, -222)
+
+[node name="plataforma marron16" parent="." instance=ExtResource("9_uy3mt")]
+position = Vector2(1896, -224)
+
+[node name="bandera" parent="." instance=ExtResource("13_870hf")]
+position = Vector2(2522, -265)
+scale = Vector2(2, 2)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("8_ml14m")]
+position = Vector2(2522, -170)
+
+[node name="plataforma marron18" parent="." instance=ExtResource("10_7eop7")]
+position = Vector2(2034, -92)
+
+[node name="plataforma marron22" parent="." instance=ExtResource("10_7eop7")]
+position = Vector2(2573, 227)
+
+[node name="plataforma marron23" parent="." instance=ExtResource("10_7eop7")]
+position = Vector2(2764, 229)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("11_jaon7")]
+position = Vector2(3240, 277)
+
+[node name="plataforma marron25" parent="." instance=ExtResource("9_uy3mt")]
+position = Vector2(3422, 198)
+
+[node name="plataforma marron26" parent="." instance=ExtResource("9_uy3mt")]
+position = Vector2(3529, 150)
+
+[node name="plataforma marron28" parent="." instance=ExtResource("9_uy3mt")]
+position = Vector2(3534, 59)
+
+[node name="plataforma marron29" parent="." instance=ExtResource("9_uy3mt")]
+position = Vector2(3413, 21)
+
+[node name="plataforma marron33" parent="." instance=ExtResource("9_uy3mt")]
+position = Vector2(2837, -171)
+
+[node name="Rock" type="Sprite2D" parent="."]
+position = Vector2(691, -10)
+texture = ExtResource("7_717we")
+
+[node name="Rock4" type="Sprite2D" parent="."]
+position = Vector2(555, -15)
+texture = ExtResource("7_717we")
+
+[node name="Rock2" type="Sprite2D" parent="."]
+position = Vector2(548, -10)
+texture = ExtResource("7_717we")
+
+[node name="Rock3" type="Sprite2D" parent="."]
+position = Vector2(562, -10)
+texture = ExtResource("7_717we")
+
+[node name="Rock8" type="Sprite2D" parent="."]
+position = Vector2(1488, 211)
+texture = ExtResource("7_717we")
+
+[node name="Rock5" type="Sprite2D" parent="."]
+position = Vector2(1401, 214)
+texture = ExtResource("7_717we")
+
+[node name="Rock6" type="Sprite2D" parent="."]
+position = Vector2(1493, 215)
+texture = ExtResource("7_717we")
+
+[node name="Rock7" type="Sprite2D" parent="."]
+position = Vector2(1482, 215)
+texture = ExtResource("7_717we")
+
+[node name="plataforma que desaparece 2" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("16_0vfi2")]
+position = Vector2(-58, 28)
+target_node = NodePath(".")
+visible_time = 5.0
+hidden_time = 1.0
+
+[node name="plataforma que desaparece" parent="." instance=ExtResource("16_u55dj")]
+position = Vector2(404, 73)
+visible_time = 4.0
+hidden_time = 3.0
+
+[node name="plataforma que desaparece 3" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("16_0vfi2")]
+position = Vector2(399, -68)
+target_node = NodePath(".")
+visible_time = 2.0
+hidden_time = 1.0
+
+[node name="plataforma que desaparece 4" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("16_0vfi2")]
+position = Vector2(671, -159)
+target_node = NodePath(".")
+visible_time = 6.0
+
+[node name="plataforma que desaparece2" parent="." instance=ExtResource("16_u55dj")]
+position = Vector2(921, 107)
+visible_time = 7.0
+hidden_time = 5.0
+
+[node name="plataforma que desaparece3" parent="." instance=ExtResource("16_u55dj")]
+position = Vector2(1238, 198)
+visible_time = 4.0
+hidden_time = 3.0
+
+[node name="plataforma que desaparece 5" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("16_0vfi2")]
+position = Vector2(1266, -212)
+target_node = NodePath(".")
+visible_time = 5.0
+hidden_time = 3.0
+
+[node name="plataforma que desaparece 6" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("16_0vfi2")]
+position = Vector2(1696, -211)
+target_node = NodePath(".")
+visible_time = 5.0
+
+[node name="plataforma que desaparece 7" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("16_0vfi2")]
+position = Vector2(2164, -229)
+target_node = NodePath(".")
+
+[node name="plataforma que desaparece4" parent="." instance=ExtResource("16_u55dj")]
+position = Vector2(2100, 31)
+visible_time = 5.0
+
+[node name="plataforma que desaparece5" parent="." instance=ExtResource("16_u55dj")]
+position = Vector2(2200, 137)
+hidden_time = 1.0
+
+[node name="plataforma que desaparece6" parent="." instance=ExtResource("16_u55dj")]
+position = Vector2(2347, 222)
+visible_time = 7.0
+hidden_time = 4.0
+
+[node name="plataforma que desaparece7" parent="." instance=ExtResource("16_u55dj")]
+position = Vector2(2961, 247)
+visible_time = 5.0
+hidden_time = 5.0
+
+[node name="plataforma que desaparece 8" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("16_0vfi2")]
+position = Vector2(3652, 111)
+target_node = NodePath(".")
+visible_time = 4.0
+hidden_time = 4.0
+
+[node name="plataforma que desaparece 9" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("16_0vfi2")]
+position = Vector2(3232, -10)
+target_node = NodePath(".")
+visible_time = 2.0
+hidden_time = 1.0
+
+[node name="plataforma que desaparece 10" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("16_0vfi2")]
+position = Vector2(3072, -47)
+target_node = NodePath(".")
+visible_time = 4.0
+hidden_time = 1.0
+
+[node name="plataforma que desaparece 11" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("16_0vfi2")]
+position = Vector2(2955, -106)
+target_node = NodePath(".")
+visible_time = 6.0
+hidden_time = 1.0
+
+[node name="area" parent="." instance=ExtResource("12_618lh")]
+position = Vector2(3193, 211)
+
+[node name="area2" parent="." instance=ExtResource("12_618lh")]
+position = Vector2(3236, 211)
+
+[node name="area3" parent="." instance=ExtResource("12_618lh")]
+position = Vector2(3282, 206)
+
+[node name="area4" parent="." instance=ExtResource("12_618lh")]
+position = Vector2(1440, 204)
+
+[node name="area5" parent="." instance=ExtResource("12_618lh")]
+position = Vector2(631, -17)
+
+[node name="Node2D" parent="." instance=ExtResource("18_52m5y")]
+position = Vector2(208, 315)
+
+[node name="area6" parent="." instance=ExtResource("12_618lh")]
+position = Vector2(-384, 38)
+
+[node name="Node2D2" parent="." instance=ExtResource("18_52m5y")]
+position = Vector2(2684, 309)
+
+[node name="personaje" parent="." instance=ExtResource("17_ti7v7")]
+position = Vector2(-498, 32)
+JUMP = 300
+speed = 250

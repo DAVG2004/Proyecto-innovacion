@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl3csprqrsher"]
+
+[ext_resource type="Texture2D" uid="uid://b87yx1r3g05k3" path="res://escenarios png/sssss.png" id="1_jl45v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8f2rq"]
+size = Vector2(504, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tcji1"]
+load_path = "res://.godot/imported/recurso.png-7146bab34519aedf6a518839ec8e4678.ctex"
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sssss" type="Sprite2D" parent="."]
+texture = ExtResource("1_jl45v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -22)
+shape = SubResource("RectangleShape2D_8f2rq")
+
+[node name="Recurso" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_tcji1")

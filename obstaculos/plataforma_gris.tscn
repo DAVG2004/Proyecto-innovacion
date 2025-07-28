@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://by2650ky6bmfg"]
+
+[ext_resource type="Texture2D" uid="uid://vryuqmqeeunu" path="res://obstucalos/Grey Off.png" id="1_hskhb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0nii"]
+size = Vector2(50, 10)
+
+[node name="plataforma marron" type="StaticBody2D"]
+
+[node name="BrownOff" type="Sprite2D" parent="."]
+scale = Vector2(1.6875, 2)
+texture = ExtResource("1_hskhb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_p0nii")
+one_way_collision = true

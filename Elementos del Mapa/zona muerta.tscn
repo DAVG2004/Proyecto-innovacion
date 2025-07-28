@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl1rrc2breo0"]
+
+[ext_resource type="Script" path="res://zona muerta.gd" id="1_xt1y3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abuiw"]
+size = Vector2(2284, 53)
+
+[node name="Node2D" type="Area2D"]
+script = ExtResource("1_xt1y3")
+grupos_validos = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, 16.5)
+shape = SubResource("RectangleShape2D_abuiw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

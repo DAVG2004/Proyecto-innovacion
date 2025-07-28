@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlnpl036uhnkq"]
+
+[ext_resource type="Texture2D" uid="uid://b47hbs5mxbijo" path="res://escenarios png/isla.png" id="1_ujmec"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sebhq"]
+size = Vector2(192, 42)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Isla" type="Sprite2D" parent="."]
+texture = ExtResource("1_ujmec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -31)
+shape = SubResource("RectangleShape2D_sebhq")
+one_way_collision = true

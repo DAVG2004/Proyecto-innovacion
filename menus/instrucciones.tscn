@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4ps12hmuuum6"]
+
+[ext_resource type="Script" path="res://Menus/instrucciones.gd" id="1_e3e63"]
+
+[node name="Instrucciones" type="Node2D"]
+script = ExtResource("1_e3e63")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1155.0
+offset_bottom = 645.0
+color = Color(0.204537, 0.0803258, 0.307556, 1)
+
+[node name="TextEdit" type="TextEdit" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.5
+offset_top = 39.0
+offset_right = 156.5
+offset_bottom = 147.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 19
+text = "Bienvenido a este pequeño 
+juego, dejame explicarte que 
+deberas hacer
+"
+editable = false
+
+[node name="TextEdit2" type="TextEdit" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -144.5
+offset_top = 200.0
+offset_right = 162.5
+offset_bottom = 455.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 18
+text = "Para que logres moverte por los
+escenarios que experimentaras
+necesitaras usar las teclas \"A\", \"D\" y 
+\"Espacio\".
+
+O en su defecto si asi lo prefieres
+puedes utilizar las flechas de tu
+teclado"
+editable = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -62.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+text = "VOLVER"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/Button" to="." method="_on_button_pressed"]

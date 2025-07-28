@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5s2xctf6ngu7"]
+
+[ext_resource type="Script" path="res://elementos/trofeo.gd" id="1_8crwq"]
+[ext_resource type="Texture2D" uid="uid://e074c3c55r4w" path="res://Free/Items/Checkpoints/End/End (Idle).png" id="1_bkd6o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwqmf"]
+size = Vector2(44, 52)
+
+[node name="trofeo" type="Area2D"]
+script = ExtResource("1_8crwq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bkd6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_pwqmf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

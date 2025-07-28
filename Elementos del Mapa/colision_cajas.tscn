@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://clk4p5opfwgg5"]
+
+[ext_resource type="Script" path="res://elementos/colision_cajas.gd" id="1_xi12t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqcu2"]
+size = Vector2(43, 42)
+
+[node name="colision cajas" type="Area2D"]
+script = ExtResource("1_xi12t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 0)
+shape = SubResource("RectangleShape2D_oqcu2")

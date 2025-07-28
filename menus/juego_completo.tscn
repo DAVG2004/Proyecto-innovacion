@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg2qrxoirfgkw"]
+
+[ext_resource type="PackedScene" uid="uid://tcpi2a32pjh7" path="res://Menus/menu.tscn" id="1_6wctt"]
+[ext_resource type="PackedScene" uid="uid://2vkeywdq0bn8" path="res://Menus/controlador_estadistico.tscn" id="2_cq8lj"]
+
+[node name="Juego completo" type="Node2D"]
+
+[node name="Menu" parent="." instance=ExtResource("1_6wctt")]
+position = Vector2(-2, 1)
+
+[node name="Controlador Estadistico" parent="." instance=ExtResource("2_cq8lj")]

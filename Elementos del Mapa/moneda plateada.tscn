@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://d2bc0cshd5fb0"]
+
+[ext_resource type="Script" path="res://elementos/moneda_plateada.gd" id="1_8xhoc"]
+[ext_resource type="Texture2D" uid="uid://eufuwbnvrdh8" path="res://Rocky Roads/Objects/coin_small_silver.png" id="1_mkypd"]
+
+[sub_resource type="Animation" id="Animation_5cd1d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CoinSmallSilver:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_8fc3s"]
+resource_name = "moneda"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CoinSmallSilver:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qcsuo"]
+_data = {
+"RESET": SubResource("Animation_5cd1d"),
+"moneda": SubResource("Animation_8fc3s")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4uwla"]
+radius = 12.0
+
+[node name="area" type="Area2D"]
+script = ExtResource("1_8xhoc")
+
+[node name="CoinSmallSilver" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_mkypd")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qcsuo")
+}
+autoplay = "moneda"
+speed_scale = 1.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4uwla")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

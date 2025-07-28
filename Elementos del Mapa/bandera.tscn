@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca2puxkp15qi4"]
+
+[ext_resource type="Script" path="res://elementos/bandera.gd" id="1_6a43c"]
+[ext_resource type="Texture2D" uid="uid://bgg25d8xaqn7k" path="res://kenney/Sprites/Tiles/Default/flag_blue_a.png" id="1_euaok"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5s6bk"]
+size = Vector2(60, 62)
+
+[node name="bandera" type="Area2D"]
+script = ExtResource("1_6a43c")
+
+[node name="FlagBlueA" type="Sprite2D" parent="."]
+texture = ExtResource("1_euaok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5s6bk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
